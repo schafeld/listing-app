@@ -9,8 +9,6 @@
 <div class="background" id="vue-app">
 
     <h1>UNIVERSITY INDEX</h1>
-
-    <p>{{ message }}</p>
     
     <form name="appForm">
         <table>
@@ -23,6 +21,10 @@
                 <td class="right-aligned">Select a country: </td>
                 <td>
                     <select name="countrySelect">
+                        <option value="0">Select a country</option>
+                        <option v-for="country in countries" :value="country">
+                          {{ country }}
+                        </option>
                     </select> 
                 </td>
             </tr>
