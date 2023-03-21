@@ -6,3 +6,10 @@ countryList.sort();
 
 console.log(rawCountryList);
 console.log(countryList);
+
+const app = new Vue ({
+    el: '#vue-app',
+    data: {
+        message: 'Hello Vue!',
+    }
+})
