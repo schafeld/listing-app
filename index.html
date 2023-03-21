@@ -32,16 +32,34 @@
                         </option>
                     </select>
                   -->
-                  <v-select :options="countries" />
+                  <v-select :options="countries" v-model="countrySelected" @input="fetchUniversities(); universitySelected=null;"></v-select>
                 </td>
             </tr>
 
             <tr>
                 <td class="right-aligned">Select a university: </td>
                 <td>
-
+                  <v-select v-model="universitySelected" :options="universities" :label="'name'"></v-select>
                 </td>
             </tr>
+
+            <tr>
+                <td class="right-aligned">Domains: </td>
+                <td v-if="universitySelected != null">
+                    <span v-for="domain in universitySelected.domains">
+                        {{domain}} <br />
+                    </span>
+                </td>
+            </tr>
+
+            <tr>
+              <td class="right-aligned">Web Pages: </td>
+              <td v-if="universitySelected != null">
+                <span v-for="webPage in universitySelected.web_pages">
+                  <a :href="webPage" target="_blank" rel="noopener nofollow">{{webPage}}</a> <br />
+                </span>
+              </td>
+          </tr>
 
         </table>
 
