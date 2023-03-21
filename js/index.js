@@ -7,6 +7,8 @@ countryList.sort();
 console.log(rawCountryList);
 console.log(countryList);
 
+Vue.component("v-select", VueSelect.VueSelect);
+
 const app = new Vue ({
     el: '#vue-app',
     data: {
