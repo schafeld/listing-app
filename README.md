@@ -1,5 +1,5 @@
 # listing-app
-Demo app with Vue, Express, and GraphQL.
+Demo app with Vue2 and Vue-Select.
 
 
 ## Attribution
