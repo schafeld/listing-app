@@ -1,4 +1,4 @@
-// load the JSON database
+﻿// load the JSON database (this needs to be "UTF-8 with BOM" encoding)
 
 const universityJson = JSON.parse(`
 [
